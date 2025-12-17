@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Deadlock Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>AI-Based Deadlock Simulator</h1>
+  <p>Visualize, detect, and resolve deadlocks using AI heuristics</p>
+</header>
+
+<div class="container">
+
+  <!-- CONTROL PANEL -->
+  <div class="controls">
+    <h2>Inputs</h2>
+    <button onclick="addProcess()">Add Process</button>
+    <button onclick="addResource()">Add Resource</button>
+    <button onclick="detectDeadlock()">Detect Deadlock</button>
+    <button onclick="resolveDeadlock()">Resolve using AI</button>
+  </div>
+
+  <!-- SIMULATION AREA -->
+  <div class="simulation">
+
+    <!-- DEADLOCK RISK PANEL -->
+    <div class="risk-panel">
+      Deadlock Risk:
+      <span id="riskValue">0%</span>
+      <div class="risk-bar">
+        <div class="risk-fill" id="riskFill"></div>
+      </div>
+    </div>
+
+    <!-- CANVAS -->
+    <canvas id="graphCanvas"></canvas>
+
+    <!-- STATUS / AI MESSAGE -->
+    <div class="status" id="status">
+      System ready...
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
